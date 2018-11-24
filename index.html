@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exam 2</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="icon" href="img/favicon.png">
+</head>
+<body>
+
+	<header class="header">
+		<div class="header__top">
+			<img src="img/bouncy.png" alt="bouncy" class="logo">
+			<div class="header__menu">
+				<ul class="menu">
+					<li class="list-item"><a href="#">Hello</a></li>
+					<li class="list-item"><a href="#">Portfolio</a></li>
+					<li class="list-item"><a href="#team">Team</a></li>
+					<li class="list-item"><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header__center">
+			<h1 class="title header__title">we are code cafe</h1>
+			<p class="text header__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+		</div>
+
+		<a href="#team" class="scroll">
+			<img src="img/scroll.png" alt="scroll" class="scroll__button">
+		</a>
+
+	</header>
+
+	<div class="portfolio">
+		<h1 class="title portfolio__title">the portfolio</h1>
+		<p class="text portfolio__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+		<div class="filter">
+			<button class="filter__button" >All Works</button>
+			<button class="filter__button" onclick="filterPrint()">Print</button>
+			<button class="filter__button" onclick="filterBranding()">Branding</button>
+			<button class="filter__button" onclick="filterWeb()">Web</button>
+			<button class="filter__button" onclick='filterHTML()'>HTML</button>
+		</div>
+		<div class="grid">
+
+		 	<div class="grid-sizer"></div>
+
+		 	<div class="grid-item grid-item-1" id="branding"></div>
+		  	<div class="grid-item grid-item-2" id="print"></div>
+		  	<div class="grid-item grid-item-3" id="print"></div>
+		 	<div class="grid-item grid-item-4" id="branding"></div>
+
+			<div class="grid-item grid-item-5" id="branding"></div>
+			<div class="grid-item grid-item-6" id="html"></div>
+			<div class="grid-item grid-item-7" id="branding"></div>
+			<div class="grid-item grid-item-8" id="html"></div>
+
+
+			<div class="grid-item grid-item-9"  id="web"></div>
+		  	<div class="grid-item grid-item-10" id="branding"></div>
+		  	<div class="grid-item grid-item-11" id="html"></div>
+			<div class="grid-item grid-item-12" id="print"></div>
+
+
+
+		</div>
+	</div>
+
+	<div class="team" id="team">
+		<h1 class="title team__title">the team</h1>
+		<p class="text team__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+		<div class="slider slider-1">
+		 	<div class="slider slide-1">
+		 		<img src="img/hero.png" alt="abdullah" class="hero-foto">
+		 		<section class="about-hero">
+		 			<h1 class="title hero-name">Abdullah Noman</h1>
+		 			<h2 class="title hero-position">Creative Director, code cafe</h2>
+		 			<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. </p>
+		 		</section>
+
+		 	</div>
+		 	<div class="slider slide-2">
+				<img src="img/hero.png" alt="abdullah" class="hero-foto">
+				<section class="about-hero">
+					<h1 class="title hero-name">Not Abdullah Noman</h1>
+					<h2 class="title hero-position">Creative Director, code cafe</h2>
+					<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.  </p>
+				</section>
+		 	</div>
+		 	<div class="slider slide-3">
+				<img src="img/hero.png" alt="abdullah" class="hero-foto">
+				<section class="about-hero">
+					<div class="hero-header">
+						<h1 class="title hero-name"> Stepan Giga</h1>
+						<h2 class="title hero-position">Creative Director, code cafe</h2>
+					</div>
+					<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.  </p>
+				</section>
+		 	</div>
+		</div>
+	</div>
+
+	<div class="contact">
+		<h1>Already Loved Us? Let's talk</h1>
+		<button class="contact__button">Contact Us</button>
+	</div>
+	<div class="testmonials">
+		<h1 class="title testmonials-title">Testmonials</h1>
+		<p class="text testmonials-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+		<div class="slider slider-2">
+		 	<div class="slider-2 slide-1">
+		 		<img src="img/hero1.png" alt="parto" class="hero1-foto">
+		 		<section class="about-hero hero1">
+		 			<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.</p>
+		 			<h1 class="title hero-name">PARTHO</h1>
+		 			<h2 class="title hero-position">Creative Director, code cafe</h2>
+		 		</section>
+
+		 	</div>
+		 	<div class="slider-2 slide-2">
+				<img src="img/hero1.png" alt="abdullah" class="hero1-foto">
+				<section class="about-hero hero1">
+					<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.</p>
+					<h1 class="title hero-name">Not Abdullah Noman</h1>
+					<h2 class="title hero-position">Creative Director, code cafe</h2>
+				</section>
+		 	</div>
+		 	<div class="slider-2 slide-3">
+				<img src="img/hero1.png" alt="abdullah" class="hero1-foto">
+				<section class="about-hero hero1">
+					<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.</p>
+					<h1 class="title hero-name">Stepan Giga</h1>
+					<h2 class="title hero-position">Creative Director, code cafe</h2>
+				</section>
+		 	</div>
+		</div>
+	</div>
+	<div class="map" id="contact">
+		<h1 class="title map-title">Contact Us</h1>
+		<p class="text map-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+		<div id="map"></div>
+	</div>
+	<footer class="footer">
+		<img src="img/bouncy-b.png" alt="logo" class="footer-logo">
+		<p class="text footer-text">Copyright 2015. All rights Reserved</p>
+		<span>
+			<a href="https://facebook.com">
+			<img src="img/icons/facebook.png" alt="facebook"></a>
+		</span>
+		<span>
+			<a href="https://linkedin.com">
+			<img src="img/icons/linkedin.png" alt="linkedin"></a>
+		</span>
+		<span>
+			<a href="https://instagram.com">
+			<img src="img/icons/p.png" alt="instagram"></a>
+		</span>
+		<span>
+			<a href="https://twitter.com" >
+			<img src="img/icons/twitter.png" alt="twitter"></a>
+		</span>
+		<span>
+			<a href="https://youtube.com">
+			<img src="img/icons/youtube.png" alt="youtube"></a>
+		</span>
+
+	</footer>
+
+
+
+
+
+	<script async
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAChYFRd5RgZDu6RWHyuB_kV0celcPHyOQ&callback=initMap">
+	    </script>
+
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/imagesloaded.pkgd.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
