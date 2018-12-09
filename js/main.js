@@ -1,4 +1,4 @@
-$(".slider").slick({
+$(".slider-1").slick({
 	dots: true,
 	arrows: false,
 	infinite: true,
@@ -7,6 +7,20 @@ $(".slider").slick({
 	autoplay: true,
 	autoplaySpeed: 4000
 });
+
+$(document).ready(function(){
+
+    $(".scroll__button").on("click","a", function (event) {
+
+        event.preventDefault();
+
+        var id  = $(this).attr('href'),
+
+            top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top}, 1500);
+	});
+});
+
 // Initialize and add the map
 $(window).load(function initMap(){
 
@@ -22,17 +36,45 @@ $(window).load(function initMap(){
   	icon: "img/favicon.png"});
 });
 
-// init Isotope
+ function useIsotope(event) {
 
-function filterHTML(){
-	$("#html").css("border","10px solid red");
-}
-function filterWeb(){
-	$("#web").css("border","10px solid red");
-}
-function filterBranding(){
-	$("#branding").css("border","10px solid red");
-}
-function filterPrint(){
-	$("#print").css("border","10px solid red");
-}
+     // init Isotope
+     let isotopeGrid = new Isotope( '.grid', {
+         itemSelector: '.grid-item',
+         masonry: {
+             // use element for option
+             columnWidth: '.grid-item',
+             itemSelector: '.grid-item',
+             transitionDuration: '0.5s',
+             gutter: 8,
+             horizontalOrder: true,
+             isFitWidth: true
+         }
+     });
+
+     let applyFilterFromLink = (linkObject) => {
+         let filterValue = linkObject.dataset.filter;
+         isotopeGrid.arrange({ filter: filterValue });
+     };
+
+     let filterGrid = function( event ) {
+         event.preventDefault();
+         applyFilterFromLink(this);
+         let activeBtn = document.querySelector('.ba-active-filter');
+         if (activeBtn) {
+             activeBtn.classList.remove('ba-active-filter');
+         }
+         this.classList.add('ba-active-filter');
+     };
+
+     document.querySelectorAll('.filter__button').forEach(filterBtn => {
+         filterBtn.addEventListener( 'click', filterGrid);
+     });
+
+     let activeBtn = document.querySelector('.ba-active-filter');
+     applyFilterFromLink(activeBtn);
+ }
+ document.addEventListener('DOMContentLoaded', useIsotope);
+
+
+

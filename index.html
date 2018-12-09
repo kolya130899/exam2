@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Exam 2</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -25,45 +26,38 @@
 			<h1 class="title header__title">we are code cafe</h1>
 			<p class="text header__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
 		</div>
-
-		<a href="#team" class="scroll">
-			<img src="img/scroll.png" alt="scroll" class="scroll__button">
-		</a>
-
+		<div class="scroll__button">
+			<a href="#team" class="scroll">
+				<img src="img/scroll.png" alt="scroll">
+			</a>
+		</div>
 	</header>
 
 	<div class="portfolio">
 		<h1 class="title portfolio__title">the portfolio</h1>
 		<p class="text portfolio__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
 		<div class="filter">
-			<button class="filter__button" >All Works</button>
-			<button class="filter__button" onclick="filterPrint()">Print</button>
-			<button class="filter__button" onclick="filterBranding()">Branding</button>
-			<button class="filter__button" onclick="filterWeb()">Web</button>
-			<button class="filter__button" onclick='filterHTML()'>HTML</button>
+			<button class="filter__button ba-active-filter" data-filter="*">All Works</button>
+			<button class="filter__button" data-filter=".print">Print</button>
+			<button class="filter__button" data-filter=".branding">Branding</button>
+			<button class="filter__button" data-filter=".web">Web</button>
+			<button class="filter__button" data-filter=".html">HTML</button>
 		</div>
 		<div class="grid">
+		 	<div class="branding grid-item grid-item-1" ></div>
+		  	<div class="print grid-item grid-item-2" ></div>
+		  	<div class="print grid-item grid-item-3" ></div>
+		 	<div class="branding grid-item grid-item-4" ></div>
 
-		 	<div class="grid-sizer"></div>
+		 	<div class="branding grid-item grid-item-5" ></div>
+			<div class="html grid-item grid-item-6" ></div>
+		 	<div class="branding grid-item grid-item-7" ></div>
+			<div class="html grid-item grid-item-8" ></div>
 
-		 	<div class="grid-item grid-item-1" id="branding"></div>
-		  	<div class="grid-item grid-item-2" id="print"></div>
-		  	<div class="grid-item grid-item-3" id="print"></div>
-		 	<div class="grid-item grid-item-4" id="branding"></div>
-
-			<div class="grid-item grid-item-5" id="branding"></div>
-			<div class="grid-item grid-item-6" id="html"></div>
-			<div class="grid-item grid-item-7" id="branding"></div>
-			<div class="grid-item grid-item-8" id="html"></div>
-
-
-			<div class="grid-item grid-item-9"  id="web"></div>
-		  	<div class="grid-item grid-item-10" id="branding"></div>
-		  	<div class="grid-item grid-item-11" id="html"></div>
-			<div class="grid-item grid-item-12" id="print"></div>
-
-
-
+			<div class="web grid-item grid-item-9"></div>
+			<div class="branding grid-item grid-item-10" ></div>
+			<div class="html grid-item grid-item-11" ></div>
+			<div class="print grid-item grid-item-12"></div>
 		</div>
 	</div>
 
@@ -81,21 +75,21 @@
 
 		 	</div>
 		 	<div class="slider slide-2">
-				<img src="img/hero.png" alt="abdullah" class="hero-foto">
+				<img src="img/scott guthrie.jpg" alt="guthrie" class="hero-foto">
 				<section class="about-hero">
-					<h1 class="title hero-name">Not Abdullah Noman</h1>
-					<h2 class="title hero-position">Creative Director, code cafe</h2>
-					<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.  </p>
+					<h1 class="title hero-name">Scott Guthrie</h1>
+					<h2 class="title hero-position">Microsoft Executive VP of Cloud and Enterprise</h2>
+					<p class="text hero-desciption">We are getting lots of requests from companies that want to build on Xamarin," says Liuson. In fact, she says, British Airways is using it to build all of their apps for multiple operating systems, letting them have one core programming team rather than one for each platform.</p>
 				</section>
 		 	</div>
 		 	<div class="slider slide-3">
-				<img src="img/hero.png" alt="abdullah" class="hero-foto">
+				<img src="img/net freedman.jpg" alt="friedman" class="hero-foto">
 				<section class="about-hero">
 					<div class="hero-header">
-						<h1 class="title hero-name"> Stepan Giga</h1>
-						<h2 class="title hero-position">Creative Director, code cafe</h2>
+						<h1 class="title hero-name">Nat Friedman</h1>
+						<h2 class="title hero-position">Xamarin co-founder</h2>
 					</div>
-					<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.  </p>
+					<p class="text hero-desciption">We want to build tools that developers want to use," he tells Business Insider. It's just the latest example of how Microsoft is turning to the companies it buys to shake up its thinking.</p>
 				</section>
 		 	</div>
 		</div>
@@ -105,37 +99,7 @@
 		<h1>Already Loved Us? Let's talk</h1>
 		<button class="contact__button">Contact Us</button>
 	</div>
-	<div class="testmonials">
-		<h1 class="title testmonials-title">Testmonials</h1>
-		<p class="text testmonials-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
-		<div class="slider slider-2">
-		 	<div class="slider-2 slide-1">
-		 		<img src="img/hero1.png" alt="parto" class="hero1-foto">
-		 		<section class="about-hero hero1">
-		 			<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.</p>
-		 			<h1 class="title hero-name">PARTHO</h1>
-		 			<h2 class="title hero-position">Creative Director, code cafe</h2>
-		 		</section>
 
-		 	</div>
-		 	<div class="slider-2 slide-2">
-				<img src="img/hero1.png" alt="abdullah" class="hero1-foto">
-				<section class="about-hero hero1">
-					<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.</p>
-					<h1 class="title hero-name">Not Abdullah Noman</h1>
-					<h2 class="title hero-position">Creative Director, code cafe</h2>
-				</section>
-		 	</div>
-		 	<div class="slider-2 slide-3">
-				<img src="img/hero1.png" alt="abdullah" class="hero1-foto">
-				<section class="about-hero hero1">
-					<p class="text hero-desciption">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.</p>
-					<h1 class="title hero-name">Stepan Giga</h1>
-					<h2 class="title hero-position">Creative Director, code cafe</h2>
-				</section>
-		 	</div>
-		</div>
-	</div>
 	<div class="map" id="contact">
 		<h1 class="title map-title">Contact Us</h1>
 		<p class="text map-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
@@ -167,18 +131,14 @@
 
 	</footer>
 
-
-
-
-
 	<script async
-	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAChYFRd5RgZDu6RWHyuB_kV0celcPHyOQ&callback=initMap">
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAChYFRd5RgZDu6RWHyuB_kV0celcPHyOQ">
 	    </script>
-
 	<script src="js/jquery-2.2.4.min.js"></script>
 	<script src="js/slick.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="js/isotope.pkgd.min.js"></script>
-	<script src="js/imagesloaded.pkgd.js"></script>
 	<script src="js/main.js"></script>
+
 </body>
 </html>
